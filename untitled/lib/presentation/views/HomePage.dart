@@ -1,9 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_awesome_select/flutter_awesome_select.dart';
-import 'package:multi_select_flutter/bottom_sheet/multi_select_bottom_sheet.dart';
-import 'package:multi_select_flutter/multi_select_flutter.dart';
-import 'package:multi_select_flutter/util/multi_select_item.dart';
-import 'package:sliding_up_panel/sliding_up_panel.dart';
+import 'package:flutter/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -15,60 +12,141 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final _panelController = PanelController();
-  List<String?> selectedItems = [];
-  List<MultiSelectItem<String>> _items = [
-    MultiSelectItem<String>('1', '육아'),
-    MultiSelectItem<String>('2', '출산'),
-    MultiSelectItem<String>('3', '출산'),
+  final categoryName = [
+    "탄생응원",
+    "임산부",
+    "건강힐링",
+    "안심돌봄",
+    "일생활 균형",
+    "편한외출",
+    "돌봄센터",
+    "커리어"
+  ];
+  List<Icon> categoryIcon = [
+    Icon(
+      Icons.spa,
+      size: 40,
+    ),
+    Icon(
+      Icons.pregnant_woman,
+      size: 40,
+    ),
+    Icon(
+      Icons.health_and_safety,
+      size: 40,
+    ),
+    Icon(
+      Icons.child_friendly,
+      size: 40,
+    ),
+    Icon(
+      Icons.maps_home_work,
+      size: 40,
+    ),
+    Icon(
+      Icons.deck,
+      size: 40,
+    ),
+    Icon(
+      Icons.child_care,
+      size: 40,
+    ),
+    Icon(
+      Icons.badge,
+      size: 40,
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            title: ElevatedButton(
-          onPressed: () {
-            _showMultiSelect(context);
-          },
-          child: Text("Scroll to top"),
-        )),
-        body: Column(
-          children: [
-            ElevatedButton(
-                onPressed: () {
-                  print(selectedItems);
-                },
-                child: Text("Print value")),
-          ],
-        ));
-  }
-
-  void _showMultiSelect(BuildContext context) async {
-    await showModalBottomSheet(
-      isScrollControlled: false, // required for min/max child size
-      context: context,
-      builder: (ctx) {
-        return Wrap(children: [
-          MultiSelectChipField(
-            items: _items,
-            initialValue: selectedItems,
-
-            onTap: (values) {
-              selectedItems = values;
-            },
-            chipWidth: 50,
-            textStyle: TextStyle(fontSize: 16),
+      appBar: AppBar(
+        shape: Border(
+          bottom: BorderSide(color: Colors.grey, width: 0.5),
+        ),
+        title: Icon(Icons.home),
+      ),
+      body: SingleChildScrollView(
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.only(left: 10, top: 10),
+                  child: const Text(
+                "서울맘",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              )),
+              Container(
+                margin: const EdgeInsets.all(10),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [makeCard(), makeCard(), makeCard(), makeCard()],
+                  ),
+                ),
+              )
+            ],
           ),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text("Print value"))
-        ]);
-      },
+          const SizedBox(height: 20),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                for (int i = 0; i < categoryIcon.length; i++)
+                  Container(
+                    margin: const EdgeInsets.only(left: 10, right: 10),
+                    child: InkWell(
+                      highlightColor: Colors.transparent,
+                      borderRadius: BorderRadius.circular(10),
+                      onTap: () {},
+                      child: Ink(
+                          width: 80,
+                          decoration: BoxDecoration(
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Container(
+                            padding: const EdgeInsets.all(10),
+                            child: Column(
+                              children: [
+                                categoryIcon[i],
+                                FittedBox(
+                                    child: Text(categoryName[i],
+                                        style: TextStyle(fontSize: 13))),
+                              ],
+                            ),
+                          )),
+                    ),
+                  )
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+          Text("최근 게시글"),
+        ]),
+      ),
     );
-    setState(() {
-    });
   }
+}
+
+Widget makeCard() {
+  return Card(
+    child: Container(
+      width: 200,
+      height: 150,
+      padding: EdgeInsets.all(10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "알고 계셨나요?",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          Text("대충 이런저런 통계"),
+        ],
+      ),
+    ),
+  );
 }
