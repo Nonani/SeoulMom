@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:untitled/domain/usecases/GetNoticesUseCase.dart';
+import 'package:untitled/presentation/viewmodels/NoticeViewModel.dart';
 import 'package:untitled/presentation/views/HomePage.dart';
 
+import 'data/repoositories/NoticesRepositoryImpl.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp( MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => NoticeViewModel(GetNoticesUseCase(NoticesRepositoryImpl()))),
+    ],
+    child: const MyApp(),
+  ),);
 }
 
 class MyApp extends StatelessWidget {

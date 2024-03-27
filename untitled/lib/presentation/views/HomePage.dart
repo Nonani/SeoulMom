@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import 'NoticePage.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
 
@@ -75,9 +77,9 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.all(10),
                   margin: const EdgeInsets.only(left: 10, top: 10),
                   child: const Text(
-                "서울맘",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              )),
+                    "서울맘",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  )),
               Container(
                 margin: const EdgeInsets.all(10),
                 child: SingleChildScrollView(
@@ -100,7 +102,13 @@ class _HomePageState extends State<HomePage> {
                     child: InkWell(
                       highlightColor: Colors.transparent,
                       borderRadius: BorderRadius.circular(10),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    NoticePage(categoryName: categoryName[i], icon: categoryIcon[i])));
+                      },
                       child: Ink(
                           width: 80,
                           decoration: BoxDecoration(
