@@ -25,7 +25,7 @@ class NoticeViewModel extends ChangeNotifier {
     }
     _isLoading = false;
     notifyListeners();
-    logger.w('fetchTrash end');
+    logger.w('get notices end');
     return true;
   }
 }
