@@ -1,8 +1,11 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:untitled/presentation/views/components/PieChart1.dart';
 
 import 'NoticePage.dart';
+import 'components/PieChart2.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -142,17 +145,20 @@ class _HomePageState extends State<HomePage> {
 Widget makeCard() {
   return Card(
     child: Container(
-      width: 200,
-      height: 150,
+      width: 300,
+      height: 200,
       padding: EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "알고 계셨나요?",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            "임신과 출산 관련 사업 들어보셨나요?",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
-          Text("대충 이런저런 통계"),
+          Text("서울시 시민 대상 통계"),
+          Expanded(
+            child: PieChartSample2(),
+          )
         ],
       ),
     ),
