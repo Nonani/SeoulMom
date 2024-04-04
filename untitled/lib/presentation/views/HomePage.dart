@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:untitled/presentation/views/components/PieChart1.dart';
 
+import 'BabyCarePage.dart';
 import 'NoticePage.dart';
 import 'components/PieChart2.dart';
 
@@ -108,14 +109,15 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         switch (categoryName[i]) {
                           case "돌봄센터":
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => BabyCarePage(
+                                      categoryName: categoryName[i],
+                                      icon: categoryIcon[i])));
                             break;
                           case "커리어":
-                            // Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //         builder: (context) => BabyCarePage(
-                            //             categoryName: categoryName[i],
-                            //             icon: categoryIcon[i])));
+
                             break;
                           default:
                             Navigator.push(
