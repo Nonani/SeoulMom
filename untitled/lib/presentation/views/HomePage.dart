@@ -2,7 +2,6 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:untitled/presentation/views/BabyCarePage.dart';
 import 'package:untitled/presentation/views/components/PieChart1.dart';
 
 import 'NoticePage.dart';
@@ -89,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: [makeCard1(), makeCard2(), makeCard3()],
+                    children: [makeCard(), makeCard(), makeCard(), makeCard()],
                   ),
                 ),
               )
@@ -107,25 +106,11 @@ class _HomePageState extends State<HomePage> {
                       highlightColor: Colors.transparent,
                       borderRadius: BorderRadius.circular(10),
                       onTap: () {
-                        switch (categoryName[i]) {
-                          case "돌봄센터":
-                            break;
-                          case "커리어":
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => BabyCarePage(
-                                        categoryName: categoryName[i],
-                                        icon: categoryIcon[i])));
-                            break;
-                          default:
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => NoticePage(
-                                        categoryName: categoryName[i],
-                                        icon: categoryIcon[i])));
-                        }
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    NoticePage(categoryName: categoryName[i], icon: categoryIcon[i])));
                       },
                       child: Ink(
                           width: 80,
@@ -157,7 +142,7 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-Widget makeCard1() {
+Widget makeCard() {
   return Card(
     child: Container(
       width: 300,
@@ -168,52 +153,6 @@ Widget makeCard1() {
         children: [
           Text(
             "임신과 출산 관련 사업 들어보셨나요?",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-          ),
-          Text("서울시 시민 대상 통계"),
-          Expanded(
-            child: PieChartSample2(),
-          )
-        ],
-      ),
-    ),
-  );
-}
-
-Widget makeCard2() {
-  return Card(
-    child: Container(
-      width: 300,
-      height: 200,
-      padding: EdgeInsets.all(10),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "서울시의 출산율은 어떤가요?",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-          ),
-          Text("서울시 시민 대상 통계"),
-          Expanded(
-            child: PieChartSample2(),
-          )
-        ],
-      ),
-    ),
-  );
-}
-
-Widget makeCard3() {
-  return Card(
-    child: Container(
-      width: 300,
-      height: 200,
-      padding: EdgeInsets.all(10),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "서울시 제왕절개분만 현황은?",
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
           Text("서울시 시민 대상 통계"),
