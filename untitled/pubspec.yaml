@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.6
   logger: ^2.2.0
   provider: ^6.1.2
+  fl_chart: ^0.67.0
+  http: ^1.2.1
+  kakao_map_plugin: ^0.2.6
 
 dev_dependencies:
   flutter_test:
