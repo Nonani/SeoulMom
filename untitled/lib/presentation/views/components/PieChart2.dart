@@ -1,5 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import '../../../resources/AppColors.dart';
 
@@ -35,16 +37,13 @@ class Indicator extends StatelessWidget {
         const SizedBox(
           width: 4,
         ),
-        Container(
-          width: 100,
-          child: Text(
-            text,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(
-              fontSize: fontSize,
-              fontWeight: FontWeight.bold,
-              color: textColor,
-            ),
+        Text(
+          text,
+          overflow: TextOverflow.ellipsis,
+          style: TextStyle(
+            fontSize: fontSize,
+            fontWeight: FontWeight.bold,
+            color: textColor,
           ),
         )
       ],
@@ -52,8 +51,8 @@ class Indicator extends StatelessWidget {
   }
 }
 
-class PieChartSample2 extends StatefulWidget {
-  const PieChartSample2({super.key});
+class PieChart2 extends StatefulWidget {
+  const PieChart2({super.key});
 
   @override
   State<StatefulWidget> createState() => PieChart2State();
@@ -66,10 +65,9 @@ class PieChart2State extends State {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        const SizedBox(
-          height: 18,
-        ),
         Expanded(
+
+          flex: 2,
           child: AspectRatio(
             aspectRatio: 1,
             child: PieChart(
@@ -106,61 +104,43 @@ class PieChart2State extends State {
             ),
           ),
         ),
-         Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Indicator(
-              color: AppColors.contentColorBlue,
-              text: '모름',
-              size: touchedIndex == 0 ? 16 : 12,
-              fontSize: touchedIndex == 0 ? 10 : 8,
-              isSquare: true,
-            ),
-            SizedBox(
-              height: 4,
-            ),
-            Indicator(
-              color: AppColors.contentColorYellow,
-              text: '들어는 보았지만 내용은 모름',
-              size: touchedIndex == 1 ? 16 : 12,
-              fontSize: touchedIndex == 1 ? 10 : 8,
-              isSquare: true,
-            ),
-            SizedBox(
-              height: 4,
-            ),
-            Indicator(
-              color: AppColors.contentColorPurple,
-              text: '내용을 어느정도 알고있음',
-              size: touchedIndex == 2 ? 16 : 12,
-              fontSize: touchedIndex == 2 ? 10 : 8,
-              isSquare: true,
-            ),
-            SizedBox(
-              height: 4,
-            ),
-            Indicator(
-              color: AppColors.contentColorGreen,
-              text: '비교적 자세히 알고있음',
-              isSquare: true,
-              size: touchedIndex == 3 ? 16 : 12,
-              fontSize: touchedIndex == 3 ? 10 : 8,
-            ),
-            SizedBox(
-              height: 18,
-            ),
-          ],
-        ),
-        const SizedBox(
-          width: 28,
-        ),
+         Expanded(
+           flex: 1,
+           child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Indicator(
+                color: AppColors.contentColorBlue,
+                text: '자연분만',
+                size: touchedIndex == 0 ? 16 : 12,
+                fontSize: touchedIndex == 0 ? 14 : 12,
+                isSquare: true,
+              ),
+
+              SizedBox(
+                height: 4,
+              ),
+              Indicator(
+                color: AppColors.contentColorYellow,
+                text: '제왕절개',
+                size: touchedIndex == 1 ? 16 : 12,
+                fontSize: touchedIndex == 1 ? 14 : 12,
+                isSquare: true,
+              ),
+              SizedBox(
+                height: 18,
+              ),
+            ],
+                   ),
+         ),
+
       ],
     );
   }
 
   List<PieChartSectionData> showingSections() {
-    return List.generate(4, (i) {
+    return List.generate(2, (i) {
       final isTouched = i == touchedIndex;
       final fontSize = isTouched ? 20.0 : 12.0;
       final radius = isTouched ? 60.0 : 50.0;
@@ -169,8 +149,8 @@ class PieChart2State extends State {
         case 0:
           return PieChartSectionData(
             color: AppColors.contentColorBlue,
-            value: 40,
-            title: '40%',
+            value: 38,
+            title: '38%',
             radius: radius,
             titlePositionPercentageOffset: 0.5,
             titleStyle: TextStyle(
@@ -183,36 +163,8 @@ class PieChart2State extends State {
         case 1:
           return PieChartSectionData(
             color: AppColors.contentColorYellow,
-            value: 30,
-            title: '30%',
-            radius: radius,
-            titlePositionPercentageOffset: 0.5,
-            titleStyle: TextStyle(
-              fontSize: fontSize,
-              fontWeight: FontWeight.bold,
-              color: AppColors.mainTextColor1,
-              shadows: shadows,
-            ),
-          );
-        case 2:
-          return PieChartSectionData(
-            color: AppColors.contentColorPurple,
-            value: 15,
-            title: '15%',
-            radius: radius,
-            titlePositionPercentageOffset: 0.5,
-            titleStyle: TextStyle(
-              fontSize: fontSize,
-              fontWeight: FontWeight.bold,
-              color: AppColors.mainTextColor1,
-              shadows: shadows,
-            ),
-          );
-        case 3:
-          return PieChartSectionData(
-            color: AppColors.contentColorGreen,
-            value: 15,
-            title: '15%',
+            value: 61,
+            title: '61%',
             radius: radius,
             titlePositionPercentageOffset: 0.5,
             titleStyle: TextStyle(

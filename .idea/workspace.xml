@@ -4,51 +4,199 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aef86166-ce19-4397-8560-c65bc6454ae3" name="Changes" comment="" />
+    <list default="true" id="dd9698b3-b7ad-4783-81c4-d1fd145d2c6f" name="Changes" comment="add. seoulmom project's setting files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/main.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ClangdSettings">
-    <option name="formatViaClangd" value="false" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feats/main_page" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
-  <component name="ProjectId" id="2eXZXpz9yiAJcEwCrzPFILie9Tb" />
+  <component name="ProjectId" id="2efSLKAIMF6cwmjDoDwodunTNjA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/jinu/StudioProjects/SeoulMom/untitled",
-    "show.migrate.to.gradle.popup": "false"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/untitled" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="FlutterRunConfigurationType" factoryName="Flutter" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/untitled/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="aef86166-ce19-4397-8560-c65bc6454ae3" name="Changes" comment="" />
-      <created>1712052926539</created>
+      <changelist id="dd9698b3-b7ad-4783-81c4-d1fd145d2c6f" name="Changes" comment="" />
+      <created>1712294082110</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1712052926539</updated>
+      <updated>1712294082110</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat. kakao map autorization">
+      <created>1712376738413</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712376738413</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat. care center domain">
+      <created>1712376814101</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712376814101</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat. care center repository and its implementation">
+      <created>1712376854515</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712376854515</updated>
+    </task>
+    <task id="LOCAL-00004" summary="refac. baby care page to care center page">
+      <created>1712376930617</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712376930617</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat. care center page's view and view model">
+      <created>1712377019889</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712377019889</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat. care center usecase">
+      <created>1712377042050</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712377042050</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refac. remove unused date field">
+      <created>1712377093790</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712377093790</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refac. change api url">
+      <created>1712377120778</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712377120778</updated>
+    </task>
+    <task id="LOCAL-00009" summary=" refac. category value 일생활 균형 to 일생활균형">
+      <created>1712377222930</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712377222930</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add. library">
+      <created>1712377253057</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712377253057</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add. macos/ios build options">
+      <created>1712377314619</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712377314619</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add. macos/ios build options">
+      <created>1712377338744</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712377338744</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add. seoulmom project's setting files">
+      <created>1712377460442</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712377460442</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feats/main_page" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat. kakao map autorization" />
+    <MESSAGE value="feat. care center domain" />
+    <MESSAGE value="feat. care center repository and its implementation" />
+    <MESSAGE value="refac. baby care page to care center page" />
+    <MESSAGE value="feat. care center page's view and view model" />
+    <MESSAGE value="feat. care center usecase" />
+    <MESSAGE value="refac. remove unused date field" />
+    <MESSAGE value="refac. change api url" />
+    <MESSAGE value=" refac. category value 일생활 균형 to 일생활균형" />
+    <MESSAGE value="add. library" />
+    <MESSAGE value="add. macos/ios build options" />
+    <MESSAGE value="add. seoulmom project's setting files" />
+    <option name="LAST_COMMIT_MESSAGE" value="add. seoulmom project's setting files" />
   </component>
 </project>

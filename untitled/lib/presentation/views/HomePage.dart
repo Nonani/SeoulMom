@@ -2,11 +2,13 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:untitled/domain/entities/CareCenter.dart';
+import 'package:untitled/presentation/views/CareCenterPage.dart';
 import 'package:untitled/presentation/views/components/PieChart1.dart';
 
 import 'NoticePage.dart';
+import 'components/BarChart1.dart';
 import 'components/PieChart2.dart';
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
 
@@ -66,7 +68,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        shape: Border(
+        shape: const Border(
           bottom: BorderSide(color: Colors.grey, width: 0.5),
         ),
         title: Icon(Icons.home),
@@ -88,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: [makeCard(), makeCard(), makeCard(), makeCard()],
+                    children: [makeCard1(), makeCard2(), makeCard3()],
                   ),
                 ),
               )
@@ -106,11 +108,26 @@ class _HomePageState extends State<HomePage> {
                       highlightColor: Colors.transparent,
                       borderRadius: BorderRadius.circular(10),
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    NoticePage(categoryName: categoryName[i], icon: categoryIcon[i])));
+                        switch (categoryName[i]) {
+                          case "돌봄센터":
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => CareCenterPage(
+                                        categoryName: categoryName[i],
+                                        icon: categoryIcon[i])));
+                            break;
+                          case "커리어":
+
+                            break;
+                          default:
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => NoticePage(
+                                        categoryName: categoryName[i],
+                                        icon: categoryIcon[i])));
+                        }
                       },
                       child: Ink(
                           width: 80,
@@ -142,7 +159,7 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-Widget makeCard() {
+Widget makeCard1() {
   return Card(
     child: Container(
       width: 300,
@@ -157,7 +174,54 @@ Widget makeCard() {
           ),
           Text("서울시 시민 대상 통계"),
           Expanded(
-            child: PieChartSample2(),
+            child: PieChart1(),
+          )
+        ],
+      ),
+    ),
+  );
+}
+
+Widget makeCard2() {
+  return Card(
+    child: Container(
+      width: 300,
+      height: 200,
+      padding: EdgeInsets.all(10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            "서울시의 출산율은 어떤가요?",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          const Text("서울시 연령별 천 명당 신생아 수"),
+          Expanded(
+            child: Padding(padding: EdgeInsets.only(left: 10, right: 10, top: 10),
+            child: BarChart1()),
+          )
+        ],
+      ),
+    ),
+  );
+}
+
+Widget makeCard3() {
+  return Card(
+    child: Container(
+      width: 300,
+      height: 200,
+      padding: EdgeInsets.all(10),
+      child: const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "서울시 제왕절개분만 현황은?",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          Text("서울시 시민 대상 통계"),
+          Expanded(
+            child: PieChart2(),
           )
         ],
       ),
