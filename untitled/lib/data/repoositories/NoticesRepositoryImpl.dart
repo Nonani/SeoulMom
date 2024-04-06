@@ -51,7 +51,7 @@ class NoticesRepositoryImpl implements NoticesRepository {
     //   "커리어"
     // ];
     Logger logger = Logger();
-    final url = 'http://175.197.122.34:8080/support_info?type=$category';
+    final url = 'http://18.218.253.250:8080/support_info?type=$category';
     // Make the HTTP request
     final response = await http.get(Uri.parse(Uri.encodeFull(url)));
 
