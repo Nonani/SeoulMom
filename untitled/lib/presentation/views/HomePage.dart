@@ -1,10 +1,5 @@
-import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:untitled/presentation/views/components/PieChart1.dart';
-
-import 'BabyCarePage.dart';
+import 'CareCenterPage.dart';
 import 'NoticePage.dart';
 import 'components/PieChart2.dart';
 
@@ -23,7 +18,7 @@ class _HomePageState extends State<HomePage> {
     "임산부",
     "건강힐링",
     "안심돌봄",
-    "일생활 균형",
+    "일생활균형",
     "편한외출",
     "돌봄센터",
     "커리어"
@@ -112,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => BabyCarePage(
+                                  builder: (context) => CareCenterPage(
                                       categoryName: categoryName[i],
                                       icon: categoryIcon[i])));
                             break;
