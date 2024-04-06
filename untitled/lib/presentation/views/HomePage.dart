@@ -1,6 +1,13 @@
+import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'CareCenterPage.dart';
+import 'package:flutter/widgets.dart';
+import 'package:untitled/domain/entities/CareCenter.dart';
+import 'package:untitled/presentation/views/CareCenterPage.dart';
+import 'package:untitled/presentation/views/components/PieChart1.dart';
+
 import 'NoticePage.dart';
+import 'components/BarChartSample7.dart';
 import 'components/PieChart2.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,7 +25,7 @@ class _HomePageState extends State<HomePage> {
     "임산부",
     "건강힐링",
     "안심돌봄",
-    "일생활균형",
+    "일생활 균형",
     "편한외출",
     "돌봄센터",
     "커리어"
@@ -62,7 +69,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        shape: Border(
+        shape: const Border(
           bottom: BorderSide(color: Colors.grey, width: 0.5),
         ),
         title: Icon(Icons.home),
@@ -104,12 +111,12 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         switch (categoryName[i]) {
                           case "돌봄센터":
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => CareCenterPage(
-                                      categoryName: categoryName[i],
-                                      icon: categoryIcon[i])));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => CareCenterPage(
+                                        categoryName: categoryName[i],
+                                        icon: categoryIcon[i])));
                             break;
                           case "커리어":
 
@@ -185,13 +192,13 @@ Widget makeCard2() {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             "서울시의 출산율은 어떤가요?",
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
-          Text("서울시 시민 대상 통계"),
+          const Text("서울시 연령별 천 명당 신생아 수"),
           Expanded(
-            child: PieChartSample2(),
+            child: BarChartSample7(),
           )
         ],
       ),
