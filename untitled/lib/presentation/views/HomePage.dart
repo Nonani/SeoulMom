@@ -7,9 +7,8 @@ import 'package:untitled/presentation/views/CareCenterPage.dart';
 import 'package:untitled/presentation/views/components/PieChart1.dart';
 
 import 'NoticePage.dart';
-import 'components/BarChartSample7.dart';
+import 'components/BarChart1.dart';
 import 'components/PieChart2.dart';
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
 
@@ -175,7 +174,7 @@ Widget makeCard1() {
           ),
           Text("서울시 시민 대상 통계"),
           Expanded(
-            child: PieChartSample2(),
+            child: PieChart1(),
           )
         ],
       ),
@@ -198,7 +197,7 @@ Widget makeCard2() {
           ),
           const Text("서울시 연령별 천 명당 신생아 수"),
           Expanded(
-            child: BarChartSample7(),
+            child: BarChart1(),
           )
         ],
       ),
@@ -212,7 +211,7 @@ Widget makeCard3() {
       width: 300,
       height: 200,
       padding: EdgeInsets.all(10),
-      child: Column(
+      child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
@@ -221,7 +220,7 @@ Widget makeCard3() {
           ),
           Text("서울시 시민 대상 통계"),
           Expanded(
-            child: PieChartSample2(),
+            child: PieChart2(),
           )
         ],
       ),

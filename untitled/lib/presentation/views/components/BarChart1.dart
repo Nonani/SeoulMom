@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 
 import '../../../resources/AppColors.dart';
 
-class BarChartSample7 extends StatefulWidget {
-  BarChartSample7({super.key});
+class BarChart1 extends StatefulWidget {
+  BarChart1({super.key});
 
   final shadowColor = const Color(0xFFCCCCCC);
   final labelList = [
@@ -29,10 +29,10 @@ class BarChartSample7 extends StatefulWidget {
   ];
 
   @override
-  State<BarChartSample7> createState() => _BarChartSample7State();
+  State<BarChart1> createState() => _BarChart1State();
 }
 
-class _BarChartSample7State extends State<BarChartSample7> {
+class _BarChart1State extends State<BarChart1> {
   BarChartGroupData generateBarGroup(
     int x,
     Color color,
