@@ -197,7 +197,8 @@ Widget makeCard2() {
           ),
           const Text("서울시 연령별 천 명당 신생아 수"),
           Expanded(
-            child: BarChart1(),
+            child: Padding(padding: EdgeInsets.only(left: 10, right: 10, top: 10),
+            child: BarChart1()),
           )
         ],
       ),
