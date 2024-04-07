@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
-TextStyle subtitleStyle = TextStyle(
+const TextStyle titleStyle = TextStyle(
+  fontSize: 26.5,
+  fontWeight: FontWeight.w600
+);
+const TextStyle subtitleStyle = TextStyle(
   fontSize: 18,
   fontWeight: FontWeight.w400,
 );
-TextStyle contentStyle = TextStyle(
+const TextStyle contentStyle = TextStyle(
   fontSize: 15,
   fontWeight: FontWeight.w300
 );

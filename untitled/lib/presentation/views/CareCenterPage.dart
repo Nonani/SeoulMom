@@ -89,6 +89,7 @@ class _CareCenterPageState extends State<CareCenterPage> {
                         );
                         markerDetail[careCenter.name] = careCenter;
                       }
+                      mapController.setLevel(8);
                       setState(() {});
                     },
                     markers: markerData,
@@ -97,7 +98,7 @@ class _CareCenterPageState extends State<CareCenterPage> {
                         currentMarker = markerId;
                       });
                     },
-                    center: LatLng(37.560870, 127.014002),
+                    center: LatLng(37.566720, 126.978229),
                   ),
                 ),
                 getSlidingUpPanel()
@@ -106,6 +107,7 @@ class _CareCenterPageState extends State<CareCenterPage> {
 
   Widget getSlidingUpPanel() {
     return SlidingUpPanel(
+      minHeight: 110,
       panel: Container(
           decoration: const BoxDecoration(
             color: Colors.white,
@@ -120,34 +122,27 @@ class _CareCenterPageState extends State<CareCenterPage> {
               SectionContent(
                   top: 25,
                   left: 0,
-                  child: Center(
+                  child: Container(
+                      margin: EdgeInsets.only(left: 10, right: 10, bottom: 25),
+                      alignment: Alignment.center,
                       child: Text(markerDetail[currentMarker]?.name ?? "",
-                        style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.w600
-                        )
+                        style: titleStyle,
+                        textAlign: TextAlign.center
                       )
                   )
               ),
-              SectionContent(
-                  top: 30,
-                  left: 50,
-                  child: Row(children: [
-                    Icon(Icons.paid_outlined),
-                    Text("  돌봄비", style: subtitleStyle)])
+              const SectionSubtitle(
+                    icon: Icons.paid_outlined,
+                    title: "돌봄비"
               ),
               SectionContent(
                 top: 10,
                 left: 82,
                 child: Text("${markerDetail[currentMarker]?.care_center_detail.price ?? ""} ₩", style: contentStyle),
               ),
-              SectionContent(
-                  top: 30,
-                  left: 50,
-                  child: Row(children: [
-                    Icon(Icons.access_time_outlined),
-                    Text("  운영 시간", style: subtitleStyle)
-                  ])
+              const SectionSubtitle(
+                icon: Icons.access_time_outlined,
+                title: "운영 시간"
               ),
               SectionContent(
                   top: 10,
@@ -165,15 +160,9 @@ class _CareCenterPageState extends State<CareCenterPage> {
                     )
                   ])
               ),
-              SectionContent(
-                  top: 30,
-                  left: 50,
-                  child: Row(
-                    children: [
-                      Icon(Icons.language),
-                      Text("  홈페이지", style: subtitleStyle)
-                    ],
-                  ),
+              const SectionSubtitle(
+                      icon: Icons.language,
+                      title:  "홈페이지"
               ),
               SectionContent(
                   top: 10,
