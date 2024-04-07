@@ -42,7 +42,6 @@ class NoticesRepositoryImpl implements NoticesRepository {
     // /care_center_info : 돌봄 센터
     // final categoryName = [
     //   "탄생응원",
-    //   "임산부",
     //   "건강힐링",
     //   "안심돌봄",
     //   "일생활 균형",

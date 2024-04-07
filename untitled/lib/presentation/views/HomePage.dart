@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:untitled/domain/entities/CareCenter.dart';
 import 'package:untitled/presentation/views/CareCenterPage.dart';
+import 'package:untitled/presentation/views/CareerNoticePage.dart';
 import 'package:untitled/presentation/views/components/PieChart1.dart';
 
 import 'NoticePage.dart';
@@ -21,10 +22,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final categoryName = [
     "탄생응원",
-    "임산부",
     "건강힐링",
     "안심돌봄",
-    "일생활 균형",
+    "일생활균형",
     "편한외출",
     "돌봄센터",
     "커리어"
@@ -32,10 +32,6 @@ class _HomePageState extends State<HomePage> {
   List<Icon> categoryIcon = [
     Icon(
       Icons.spa,
-      size: 40,
-    ),
-    Icon(
-      Icons.pregnant_woman,
       size: 40,
     ),
     Icon(
@@ -118,7 +114,12 @@ class _HomePageState extends State<HomePage> {
                                         icon: categoryIcon[i])));
                             break;
                           case "커리어":
-
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => CareerNoticePage(
+                                        categoryName: categoryName[i],
+                                        icon: categoryIcon[i])));
                             break;
                           default:
                             Navigator.push(

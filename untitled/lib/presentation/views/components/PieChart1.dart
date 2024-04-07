@@ -68,7 +68,7 @@ class PieChart1State extends State {
           height: 18,
         ),
         Expanded(
-          flex: 1,
+          flex: 2,
           child: AspectRatio(
             aspectRatio: 1,
             child: PieChart(
@@ -105,8 +105,9 @@ class PieChart1State extends State {
             ),
           ),
         ),
+        const SizedBox(width: 10,),
          Expanded(
-           flex: 1,
+           flex: 3,
            child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled/presentation/viewmodels/NoticeViewModel.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class NoticePage extends StatefulWidget {
   const NoticePage({super.key, required this.categoryName, required this.icon});
@@ -53,13 +55,32 @@ class _NoticePageState extends State<NoticePage> {
               itemCount: viewModel.notices.length,
               itemBuilder: (context, index) {
                 final notice = viewModel.notices[index];
-                return ListTile(
-                  title: Text(notice.title),
-                  subtitle: Text(notice.content),
-                  onTap: () {
-                    // Open detail page
-                  },
+                return Column(
+                  children: [
+                    Container(
+                      height: 8,
+                      color: Colors.grey[200],
+                    ),
+                    GestureDetector(
+                      child: ListTile(
+                        title: Text(notice.title, style: TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Text(notice.content, maxLines:2, overflow: TextOverflow.ellipsis,),
+                      ),
+                      onTap: ()  async{
+                        if(notice.detail_url != null && notice.detail_url != '.')
+                          {
+                            final url = Uri.parse(notice.detail_url);
+                            if (await canLaunchUrl(url)) {
+                              launchUrl(url, mode: LaunchMode.externalApplication);
+                            }
+                          }
+
+                      },
+                    ),
+
+                  ],
                 );
+
               },
             ),
     );

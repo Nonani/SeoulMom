@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:kakao_map_plugin/kakao_map_plugin.dart';
 import 'package:provider/provider.dart';
+import 'package:untitled/data/repoositories/CareerNoticesRepositoryImpl.dart';
+import 'package:untitled/domain/repositories/CareerNoticesRepository.dart';
+import 'package:untitled/domain/usecases/GetCareerNoticesUseCase.dart';
 import 'package:untitled/domain/usecases/GetNoticesUseCase.dart';
 import 'package:untitled/presentation/viewmodels/CareCenterViewModel.dart';
+import 'package:untitled/presentation/viewmodels/CareerNoticeViewModel.dart';
 import 'package:untitled/presentation/viewmodels/NoticeViewModel.dart';
 import 'package:untitled/presentation/views/HomePage.dart';
 
@@ -17,6 +21,7 @@ void main() async{
   runApp( MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => NoticeViewModel(GetNoticesUseCase(NoticesRepositoryImpl()))),
+      ChangeNotifierProvider(create: (_) => CareerNoticeViewModel(GetCareerNoticesUseCase(CareerNoticesRepositoryImpl()))),
       ChangeNotifierProvider(create: (_) => CareCenterViewModel(GetCareCenterListUseCase(CareCenterRepositoryImpl()))),
     ],
     child: const MyApp(),
