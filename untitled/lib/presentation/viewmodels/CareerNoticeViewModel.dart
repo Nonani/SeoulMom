@@ -22,7 +22,7 @@ class CareerNoticeViewModel extends ChangeNotifier {
     notifyListeners();
     _notices = await getCareerNoticesUseCase();
     for (var notice in _notices) {
-      logger.i('notice: ${notice.title}');
+      logger.i('open: ${notice.applyOpen} \nclose: ${notice.applyClose}\ndiff: ${notice.applyClose?.difference(DateTime.now()).inDays.toString()}');
     }
     _isLoading = false;
     notifyListeners();
