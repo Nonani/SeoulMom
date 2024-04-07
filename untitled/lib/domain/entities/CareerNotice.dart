@@ -1,5 +1,5 @@
 class CareerNotice {
-  final String? title;
+  final String title;
   final String? center;
   final DateTime? applyOpen;
   final DateTime? applyClose;
@@ -14,7 +14,7 @@ class CareerNotice {
   final String? type;
 
   CareerNotice({
-    this.title,
+    required this.title,
     this.center,
     this.applyOpen,
     this.applyClose,
@@ -32,7 +32,7 @@ class CareerNotice {
   // JSON에서 CareerNotice 객체로 변환하는 팩토리 생성자
   factory CareerNotice.fromJson(Map<String, dynamic> json) {
     return CareerNotice(
-      title: json['title'] as String?,
+      title: json['title'],
       center: json['center'] as String?,
       applyOpen: json['applyOpen'] != null ? DateTime.parse(json['applyOpen']) : null,
       applyClose: json['applyClose'] != null ? DateTime.parse(json['applyClose']) : null,
