@@ -71,21 +71,15 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final viewModel = Provider.of<HomeViewModel>(context);
     return Scaffold(
-      appBar: AppBar(
-        shape: const Border(
-          bottom: BorderSide(color: Colors.grey, width: 0.5),
-        ),
-        title: Icon(Icons.home),
-      ),
       body: Column(
         children: [
+          SizedBox(height: 20,),
           Flexible(
-            flex: 6,
+            flex: 5,
             child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
               Container(
-                  padding: const EdgeInsets.all(10),
-                  margin: const EdgeInsets.only(left: 10, top: 10),
+                  padding: const EdgeInsets.all(15),
                   child: const Text(
                     "서울맘",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -99,7 +93,6 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -163,15 +156,13 @@ class _HomePageState extends State<HomePage> {
               ),
             ]),
           ),
-          Flexible(
-              child: Container(
-                  alignment: Alignment.centerLeft,
-                  child: const Text("  임산부 건강정보",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600
-                      ))
-              ),
+          Container(
+              alignment: Alignment.bottomLeft,
+              child: const Text("  임산부 건강정보",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600
+                  ))
           ),
           Flexible(
             flex: 5,
