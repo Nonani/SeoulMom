@@ -1,6 +1,5 @@
 
 import 'package:flutter/cupertino.dart';
-
 import '../styles/CareCenterSectionStyles.dart';
 
 class SectionContent extends StatefulWidget {

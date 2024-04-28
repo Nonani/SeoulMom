@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled/presentation/viewmodels/NoticeViewModel.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:untitled/presentation/views/InfoDetailPage.dart';
 
 class NoticePage extends StatefulWidget {
   const NoticePage({super.key, required this.categoryName, required this.icon});
@@ -35,7 +34,7 @@ class _NoticePageState extends State<NoticePage> {
 
         automaticallyImplyLeading: false,
         centerTitle: false,
-        shape: Border(
+        shape: const Border(
           bottom: BorderSide(color: Colors.grey, width: 0.5),
         ),
         title: Row(
@@ -44,8 +43,8 @@ class _NoticePageState extends State<NoticePage> {
           children: [
             widget.icon,
             const SizedBox(width: 10),
-            Text('${widget.categoryName}',
-                style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(widget.categoryName,
+                style: const TextStyle(fontWeight: FontWeight.bold)),
           ],
         ),
       ),
@@ -63,26 +62,17 @@ class _NoticePageState extends State<NoticePage> {
                     ),
                     GestureDetector(
                       child: ListTile(
-                        title: Text(notice.title, style: TextStyle(fontWeight: FontWeight.bold)),
-                        subtitle: Text(notice.content, maxLines:2, overflow: TextOverflow.ellipsis,),
+                        title: Text(notice.title, style: const TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Text(notice.content, maxLines:2, overflow: TextOverflow.visible,),
                       ),
-                      onTap: ()  async{
-                        if(notice.detail_url != null && notice.detail_url != '.')
-                          {
-                            final url = Uri.parse(notice.detail_url);
-                            if (await canLaunchUrl(url)) {
-                              launchUrl(url, mode: LaunchMode.externalApplication);
-                            }
-                          }
-
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => InfoDetailPage(category: widget.categoryName, notice: notice)));
                       },
-                    ),
-
+                    )
                   ],
                 );
-
               },
-            ),
+          ),
     );
   }
 }

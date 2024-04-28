@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:kakao_map_plugin/kakao_map_plugin.dart';
 import 'package:provider/provider.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
@@ -46,7 +44,7 @@ class _CareCenterPageState extends State<CareCenterPage> {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           centerTitle: false,
-          shape: Border(
+          shape: const Border(
             bottom: BorderSide(color: Colors.grey, width: 0.5),
           ),
           title: Row(
@@ -54,8 +52,8 @@ class _CareCenterPageState extends State<CareCenterPage> {
             children: [
               widget.icon,
               const SizedBox(width: 10),
-              Text('${widget.categoryName}',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
+              Text(widget.categoryName,
+                  style: const TextStyle(fontWeight: FontWeight.bold)),
             ],
           ),
         ),
@@ -123,7 +121,7 @@ class _CareCenterPageState extends State<CareCenterPage> {
                   top: 25,
                   left: 0,
                   child: Container(
-                      margin: EdgeInsets.only(left: 10, right: 10, bottom: 25),
+                      margin: const EdgeInsets.only(left: 10, right: 10, bottom: 25),
                       alignment: Alignment.center,
                       child: Text(markerDetail[currentMarker]?.name ?? "",
                         style: titleStyle,
