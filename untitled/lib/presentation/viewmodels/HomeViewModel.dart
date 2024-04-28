@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:untitled/domain/entities/HealthNotice.dart';
 import 'package:untitled/domain/usecases/GetHealthNoticeUseCase.dart';
 

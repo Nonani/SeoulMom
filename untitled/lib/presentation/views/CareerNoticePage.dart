@@ -1,9 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled/presentation/viewmodels/CareerNoticeViewModel.dart';
-import 'package:untitled/presentation/viewmodels/NoticeViewModel.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CareerNoticePage extends StatefulWidget {
@@ -22,7 +19,6 @@ class _CareerNoticePageState extends State<CareerNoticePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       viewModel = Provider.of<CareerNoticeViewModel>(context, listen: false);
@@ -37,7 +33,7 @@ class _CareerNoticePageState extends State<CareerNoticePage> {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           centerTitle: false,
-          shape: Border(
+          shape: const Border(
             bottom: BorderSide(color: Colors.grey, width: 0.5),
           ),
           title: Row(
@@ -45,8 +41,8 @@ class _CareerNoticePageState extends State<CareerNoticePage> {
             children: [
               widget.icon,
               const SizedBox(width: 10),
-              Text('${widget.categoryName}',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
+              Text(widget.categoryName,
+                  style: const TextStyle(fontWeight: FontWeight.bold)),
             ],
           ),
         ),
@@ -90,7 +86,7 @@ class _CareerNoticePageState extends State<CareerNoticePage> {
                                         color: Colors.grey, fontSize: 12))
                                     : Text(
                                   'D-${notice.applyClose?.difference(DateTime.now()).inDays.toString()}',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.blue, fontSize: 12),
                                 ),
                               ],
@@ -119,7 +115,7 @@ class _CareerNoticePageState extends State<CareerNoticePage> {
 
                                 TextButton(
                                   onPressed: () {
-                                    launch(notice.detailUrl!);
+                                    launchUrl(Uri.parse(notice.detailUrl!));
                                   },
                                   child: const Text('상세보기'),
                                 )
@@ -130,6 +126,8 @@ class _CareerNoticePageState extends State<CareerNoticePage> {
                       ),
                     ],
                   );
-                }));
+                }
+              )
+        );
   }
 }

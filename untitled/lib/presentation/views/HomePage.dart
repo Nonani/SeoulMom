@@ -79,142 +79,145 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
-          Column(crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-            Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.only(left: 10, top: 10),
-                child: const Text(
-                  "서울맘",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                )),
-            Container(
-              margin: const EdgeInsets.all(10),
-              child: SingleChildScrollView(
+          Flexible(
+            flex: 6,
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+              Container(
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.only(left: 10, top: 10),
+                  child: const Text(
+                    "서울맘",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  )),
+              Container(
+                margin: const EdgeInsets.all(10),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [makeCard1(), makeCard2(), makeCard3()],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+              SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  children: [makeCard1(), makeCard2(), makeCard3()],
-                ),
-              ),
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  for (int i = 0; i < categoryIcon.length; i++)
-                    Container(
-                      margin: const EdgeInsets.only(left: 10, right: 10),
-                      child: InkWell(
-                        highlightColor: Colors.transparent,
-                        borderRadius: BorderRadius.circular(10),
-                        onTap: () {
-                          switch (categoryName[i]) {
-                            case "돌봄센터":
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => CareCenterPage(
-                                          categoryName: categoryName[i],
-                                          icon: categoryIcon[i])));
-                              break;
-                            case "커리어":
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => CareerNoticePage(
-                                          categoryName: categoryName[i],
-                                          icon: categoryIcon[i])));
-                              break;
-                            default:
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => NoticePage(
-                                          categoryName: categoryName[i],
-                                          icon: categoryIcon[i])
-                                  )
-                              );
-                          }
-                        },
-                        child: Ink(
-                            width: 80,
-                            decoration: BoxDecoration(
-                              color: Colors.transparent,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Container(
-                              padding: const EdgeInsets.all(10),
-                              child: Column(
-                                children: [
-                                  categoryIcon[i],
-                                  FittedBox(
-                                      child: Text(categoryName[i],
-                                          style: TextStyle(fontSize: 13))),
-                                ],
-                              ),
-                            )),
-                      ),
-                    )
-                ],
-              ),
-            ),
-          ]),
-          Flexible(
-            child: Column(
-              children: [
-                Container(
-                    alignment: Alignment.centerLeft,
-                    child: const Text("  임산부 건강정보",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600
-                        ))
-                ),
-                Container(
-                    child: viewModel.isLoading
-                        ? const Center(child: CircularProgressIndicator())
-                        : ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: viewModel.healthNoticeList.length,
-                        itemBuilder: (BuildContext context, int idx) {
-                          HealthNotice healthNotice =
-                          viewModel.healthNoticeList[idx];
-                          return InkWell(
-                            onTap: (){
-                              Navigator.push(context,
-                                  MaterialPageRoute(
-                                      builder: (context) => HealthNoticeDetailPage(
-                                          sequence: viewModel.healthNoticeList[idx].detail_url
-                                      )
-                                  )
-                              );
-                            },
-                              child:Container(
-                              margin: EdgeInsets.only(left: 10, right : 10, bottom: 10),
-                              padding: EdgeInsets.all(6),
+                  children: [
+                    for (int i = 0; i < categoryIcon.length; i++)
+                      Container(
+                        margin: const EdgeInsets.only(left: 10, right: 10),
+                        child: InkWell(
+                          highlightColor: Colors.transparent,
+                          borderRadius: BorderRadius.circular(10),
+                          onTap: () {
+                            switch (categoryName[i]) {
+                              case "돌봄센터":
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => CareCenterPage(
+                                            categoryName: categoryName[i],
+                                            icon: categoryIcon[i])));
+                                break;
+                              case "커리어":
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => CareerNoticePage(
+                                            categoryName: categoryName[i],
+                                            icon: categoryIcon[i])));
+                                break;
+                              default:
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => NoticePage(
+                                            categoryName: categoryName[i],
+                                            icon: categoryIcon[i])
+                                    )
+                                );
+                            }
+                          },
+                          child: Ink(
+                              width: 80,
                               decoration: BoxDecoration(
-                                  color: Colors.white12,
-                                  borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(
-                                      color: Colors.black26,
-                                      width: 4
-                                  )
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(10),
                               ),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    healthNotice.title,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500
-                                    ),
+                              child: Container(
+                                padding: const EdgeInsets.all(10),
+                                child: Column(
+                                  children: [
+                                    categoryIcon[i],
+                                    FittedBox(
+                                        child: Text(categoryName[i],
+                                            style: TextStyle(fontSize: 13))),
+                                  ],
+                                ),
+                              )),
+                        ),
+                      )
+                  ],
+                ),
+              ),
+            ]),
+          ),
+          Flexible(
+              child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: const Text("  임산부 건강정보",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600
+                      ))
+              ),
+          ),
+          Flexible(
+            flex: 5,
+            child: Container(
+                child: viewModel.isLoading
+                    ? const Center(child: CircularProgressIndicator())
+                    : ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: viewModel.healthNoticeList.length,
+                    itemBuilder: (BuildContext context, int idx) {
+                      HealthNotice healthNotice =
+                      viewModel.healthNoticeList[idx];
+                      return InkWell(
+                        onTap: (){
+                          Navigator.push(context,
+                              MaterialPageRoute(
+                                  builder: (context) => HealthNoticeDetailPage(
+                                      sequence: viewModel.healthNoticeList[idx].detail_url
                                   )
-                                ],
-                              )));
-                        })),
-              ],
-            ),
+                              )
+                          );
+                        },
+                          child:Container(
+                          margin: EdgeInsets.only(left: 10, right : 10, bottom: 10),
+                          padding: EdgeInsets.all(6),
+                          decoration: BoxDecoration(
+                              color: Colors.white12,
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(
+                                  color: Colors.black26,
+                                  width: 4
+                              )
+                          ),
+                          child: Column(
+                            children: [
+                              Text(
+                                healthNotice.title,
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w500
+                                ),
+                              )
+                            ],
+                          )));
+                    })),
           )
         ],
       ),

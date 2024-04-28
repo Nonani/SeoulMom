@@ -3,7 +3,6 @@ import 'package:logger/logger.dart';
 import 'package:untitled/domain/usecases/GetCareerNoticesUseCase.dart';
 
 import '../../domain/entities/CareerNotice.dart';
-import '../../domain/usecases/GetNoticesUseCase.dart';
 
 class CareerNoticeViewModel extends ChangeNotifier {
   final GetCareerNoticesUseCase getCareerNoticesUseCase;

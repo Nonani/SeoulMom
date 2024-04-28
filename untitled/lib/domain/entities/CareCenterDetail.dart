@@ -27,9 +27,9 @@ class CareCenterDetail {
         ),
         open: json['open'] as String,
         close: json['close'] as String,
-        open_sat: json['openSat'] as String ?? '',
-        close_sat: json['closeSat'] as String ?? '',
-        price: json['price'] as int ?? 0,
+        open_sat: json['openSat'] as String,
+        close_sat: json['closeSat'] as String,
+        price: json['price'] as int,
         detail_url: json['detailUrl'] as String? ?? '',
       );
 

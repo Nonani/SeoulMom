@@ -1,5 +1,3 @@
-
-
 import '../entities/HealthNotice.dart';
 import '../repositories/HealthNoticeRepository.dart';
 
