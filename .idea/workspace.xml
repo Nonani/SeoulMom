@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aef86166-ce19-4397-8560-c65bc6454ae3" name="Changes" comment="add. dpendency">
-      <change afterPath="$PROJECT_DIR$/untitled/lib/presentation/views/InfoDetailPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SeoulMom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SeoulMom.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/data/repoositories/CareCenterRepositoryImpl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/data/repoositories/CareCenterRepositoryImpl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/data/repoositories/CareerNoticesRepositoryImpl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/data/repoositories/CareerNoticesRepositoryImpl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/data/repoositories/HealthNoticeRepositoryImpl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/data/repoositories/HealthNoticeRepositoryImpl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/data/repoositories/NoticesRepositoryImpl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/data/repoositories/NoticesRepositoryImpl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/domain/entities/CareCenterDetail.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/domain/entities/CareCenterDetail.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/domain/usecases/GetHealthNoticeUseCase.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/domain/usecases/GetHealthNoticeUseCase.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/presentation/viewmodels/CareerNoticeViewModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/presentation/viewmodels/CareerNoticeViewModel.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/presentation/viewmodels/HomeViewModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/presentation/viewmodels/HomeViewModel.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/presentation/viewmodels/NoticeViewModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/presentation/viewmodels/NoticeViewModel.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/presentation/views/CareCenterPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/presentation/views/CareCenterPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/presentation/views/CareerNoticePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/presentation/views/CareerNoticePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/presentation/views/HomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/presentation/views/HomePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/presentation/views/NoticePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/presentation/views/NoticePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/presentation/views/components/PieChart1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/presentation/views/components/PieChart1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/presentation/views/components/PieChart2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/presentation/views/components/PieChart2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/lib/presentation/views/widgets/CareCenterSectionWidgets.dart" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/lib/presentation/views/widgets/CareCenterSectionWidgets.dart" afterDir="false" />
-    </list>
+    <list default="true" id="aef86166-ce19-4397-8560-c65bc6454ae3" name="Changes" comment="update. project metadata" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,6 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -89,7 +69,35 @@
       <option name="project" value="LOCAL" />
       <updated>1712547434824</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refac. url value">
+      <created>1714299379161</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714299379161</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat. InfoDetailPage">
+      <created>1714299613503</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714299613503</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refac. const values">
+      <created>1714299657875</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714299657875</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update. project metadata">
+      <created>1714299717744</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714299717744</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,6 +114,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat. Home page's pregnant Health notice" />
     <MESSAGE value="add. dpendency" />
-    <option name="LAST_COMMIT_MESSAGE" value="add. dpendency" />
+    <MESSAGE value="refac. url value" />
+    <MESSAGE value="feat. InfoDetailPage" />
+    <MESSAGE value="refac. const values" />
+    <MESSAGE value="update. project metadata" />
+    <option name="LAST_COMMIT_MESSAGE" value="update. project metadata" />
   </component>
 </project>
