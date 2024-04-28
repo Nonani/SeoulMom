@@ -2,8 +2,6 @@ import 'package:logger/logger.dart';
 import 'package:untitled/domain/entities/CareerNotice.dart';
 import 'package:untitled/domain/repositories/CareerNoticesRepository.dart';
 
-import '../../domain/entities/Notice.dart';
-import '../../domain/repositories/NoticesRepository.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 class CareerNoticesRepositoryImpl implements CareerNoticesRepository {
@@ -13,7 +11,7 @@ class CareerNoticesRepositoryImpl implements CareerNoticesRepository {
   Future<List<CareerNotice>> getCareerNotices() async{
     // TODO: implement getCareerNotices
     Logger logger = Logger();
-    final url =  'http://18.218.253.250:8080/career_info';
+    const String url =  'http://18.118.160.193:8080/career_info';
     final response = await http.get(Uri.parse(Uri.encodeFull(url)));
 
     // Check the status code before decoding the response

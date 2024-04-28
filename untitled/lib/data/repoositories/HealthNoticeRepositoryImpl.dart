@@ -9,7 +9,7 @@ class HealthNoticeRepositoryImpl implements HealthNoticeRepository {
 
   @override
   Future<List<HealthNotice>> getHealthNoticeList() async {
-    const url = 'http://18.218.253.250:8080/health_info';
+    const url = 'http://18.118.160.193:8080/health_info';
     final response = await http.get(Uri.parse(Uri.encodeFull(url)));
     var logger = Logger();
     if (response.statusCode == 200) {
