@@ -14,7 +14,7 @@
   <p class="ls2">○ 이 개인정보처리방침은 <em class="emphasis">2024</em>년 <em class="emphasis">5</em>월 <em
       class="emphasis">4일</em>부터 적용됩니다.</p></br>
   <p class='lh6 bs4'><strong>제1조(개인정보의 처리 목적)<br /><br /><em class="emphasis">
-        <수량 물타기 계산기>
+        <SeoulMom>
       </em>은(는) 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며 이용 목적이 변경되는 겨우에는 「개인정보 보호법」 제18조에 따라 별도의
       동의를 받는 등 필요한 조치를 이행할 예정입니다.</strong></p>
   <ul class="list_indent2 mgt10">
